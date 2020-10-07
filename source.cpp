@@ -1,14 +1,18 @@
 #include <iostream>
 using namespace std;
-int tong(int a, int b);
-
+int tong(int a, int b){
+	int Tong = a + b;
+	return Tong:
+}
 int hieu(int a, int b){
 	return (a - b);
 }
 int tich(int a, int b){
 	return a * b;
 }
-float thuong(int a, int b);
+float thuong(int a, int b){
+	return (float)a/b;
+}
 int main()
 {
 	int a, b;
@@ -18,14 +22,10 @@ int main()
 	cout << "Tinh gi? (+,-,*,/) ";
 	cin >> ch;
 	
-	float thuong(int a, int b){
-		return (float)a/b;
-	}
-	
 	switch (phepToan)
 	{
 	case '+':
-		
+		cout<<"Tong la: <<tong(a,b)<<endl;
 		break;
 	case '-':
 		int kq = hieu(a,b);
