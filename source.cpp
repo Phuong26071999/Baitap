@@ -1,10 +1,13 @@
 #include <iostream>
 using namespace std;
 int tong(int a, int b);
+
 int hieu(int a, int b){
 	return (a - b);
 }
-int tich(int a, int b);
+int tich(int a, int b){
+	return a * b;
+}
 float thuong(int a, int b);
 int main()
 {
@@ -14,6 +17,11 @@ int main()
 	cin >> a >> b;
 	cout << "Tinh gi? (+,-,*,/) ";
 	cin >> ch;
+	
+	float thuong(int a, int b){
+		return (float)a/b;
+	}
+	
 	switch (phepToan)
 	{
 	case '+':
@@ -24,10 +32,13 @@ int main()
 		cout<<"hieu la : "<< kq << endl;
 		break;
 	case '*':
-
+		int kq;
+		kq = tich(a,b);
+		cout << "Tich cua " << a << "x" << b << " = " << kq;
 		break;
 	case '/':
-
+		float kq4 = thuong(a,b);
+		cout << "Ket qua phep tinh chia giua " + a + "va" + b + "la: " + kq4;
 		break;
 	default:
 		cout << "Chon sai phep toan";
