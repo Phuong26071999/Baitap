@@ -11,7 +11,11 @@ int tich(int a, int b){
 	return a * b;
 }
 float thuong(int a, int b){
-	return (float)a/b;
+	while (b == 0){
+		cout << "Nhap sai, nhap b khac 0: ";
+		cin >> b;
+	}
+	return (float) a/b;
 }
 int main()
 {
@@ -28,8 +32,8 @@ int main()
 		cout<<"Tong la: <<tong(a,b)<<endl;
 		break;
 	case '-':
-		int kq = hieu(a,b);
-		cout<<"hieu la : "<< kq << endl;
+		int kq2 = hieu(a,b);
+		cout<<"hieu la : "<< kq2 << endl;
 		break;
 	case '*':
 		int kq;
@@ -38,7 +42,7 @@ int main()
 		break;
 	case '/':
 		float kq4 = thuong(a,b);
-		cout << "Ket qua phep tinh chia giua " + a + "va" + b + "la: " + kq4;
+		cout << "Ket qua phep tinh chia giua " << a << "va" << b << "la: " << kq4;
 		break;
 	default:
 		cout << "Chon sai phep toan";
