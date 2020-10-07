@@ -24,7 +24,7 @@ int main()
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
 	cout << "Tinh gi? (+,-,*,/) ";
-	cin >> ch;
+	cin >> phepToan;
 	
 	switch (phepToan)
 	{
