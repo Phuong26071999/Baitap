@@ -2,7 +2,7 @@
 using namespace std;
 int tong(int a, int b){
 	int Tong = a + b;
-	return Tong:
+	return Tong;
 }
 int hieu(int a, int b){
 	return (a - b);
@@ -29,7 +29,7 @@ int main()
 	switch (phepToan)
 	{
 	case '+':
-		cout<<"Tong la: <<tong(a,b)<<endl;
+		cout<<"Tong la:" <<tong(a,b)<<endl;
 		break;
 	case '-':
 		int kq2 = hieu(a,b);
@@ -49,4 +49,5 @@ int main()
 		break;
 	}
 	return 0;
+}
 }
