@@ -94,7 +94,7 @@ int main()
 		cout << "hieu la : " << hieu(a, b) << endl;
 		break;
 	case '*':
-			cout << "Tich cua " << a << "x" << b << " = " << tich(a, b) << endl;
+		cout << "Tich cua " << a << "x" << b << " = " << tich(a, b) << endl;
 		break;
 	case '/':
 		cout << "Ket qua phep tinh chia giua " << a << "va" << b << "la: " << thuong(a, b) << endl;
@@ -105,11 +105,11 @@ int main()
 		cout << "\tSo nguyen b = " << randB << endl;
 		cout << "\tKet qua " << randA << " + " << randB << " = ";
 		cin >> kqR;
-		if (kqR == (randA + randB)) {
-			cout << "Ban da nhap dung ket qua la: " << randA + randB << " !!!" << endl;
+		while (kqR != randA + randB) {
+			cout << "Ban da nhap sai ket qua, nhap lai: ";
+			cin >> kqR;
 		}
-		else
-			cout << "Ban da nhap sai ket qua!!!" << endl;
+		cout << "Ban da nhap dung ket qua la: " << randA + randB << " !!!" << endl;
 		break;
 	case 'v':
 		cout << "nhap vao do dai hinh vuong: ";
@@ -141,7 +141,7 @@ int main()
 		cout << "Chu vi hinh CN la: " << ChuVi_HinhTron(r);
 	case 'x':
 		TruNgauNhien(randA, randB);
-			break;
+		break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
