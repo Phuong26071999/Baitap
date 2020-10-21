@@ -46,12 +46,13 @@ int main()
 	int randB = 0 + rand() % (100 + 1 - 0);
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
-	cout << "Tinh gi? (+,-,*,/,c) ";
-	cout << "nhap vao do dai hinh vuong";
-	cin >> c;
-	cout << "Nhap theo dung thu tu chieu dai, chieu rong, ban kinh";
-	cin >> cd >> cr>>r;
-	cout << "Tinh gi? (+,-,*,/, dien tich hinh vuong(v), dien tich hinh chu nhat(n), dien tich hinh tron(t)) " << endl;
+	//cout << "Tinh gi? (+,-,*,/,c) ";
+	cout << "Tinh gi? (+,-,*,/) " << endl
+		<< "\tr: Tinh cong tu 2 so ngau nhien." << endl
+		<< "\tv: Tinh dien tich hinh vuong." << endl
+		<< "\tn: Tinh dien tich hinh chu nhat." << endl
+		<< "\tt: Tinh dien tich hinh tron." << endl
+		<< "Hay chon: ";
 	cin >> phepToan;
 
 	switch (phepToan)
@@ -63,12 +64,12 @@ int main()
 		cout << "hieu la : " << hieu(a, b) << endl;
 		break;
 	case '*':
-		cout << "Tich cua " << a << "x" << b << " = " << tich(a, b)<< endl;
+		cout << "Tich cua " << a << "x" << b << " = " << tich(a, b) << endl;
 		break;
 	case '/':
 		cout << "Ket qua phep tinh chia giua " << a << "va" << b << "la: " << thuong(a, b) << endl;
 		break;
-	case 'c':
+	case 'r':
 		cout << "\t\tLuyen tap phep cong tu 2 so ngau nhien." << endl << endl;
 		cout << "\tSo nguyen a = " << randA << endl;
 		cout << "\tSo nguyen b = " << randB << endl;
@@ -81,19 +82,25 @@ int main()
 			cout << "Ban da nhap sai ket qua!!!" << endl;
 		break;
 	case 'v':
-		cout << "Dien tich hinh chu nhat la: " << Tinh_Dientich_HinhVuong(c);
+		cout << "nhap vao do dai hinh vuong: ";
+		cin >> c;
+		cout << "Dien tich hinh vuong la: " << Tinh_Dientich_HinhVuong(c);
 		break;
 	case 'n':
-		cout << "Dien tich hinh chu nhat la: " << cd << "x" << cr << "= " << Tinh_DienTich_ChuNhat(cd, cr);
+		cout << "Nhap theo dung thu tu chieu dai, chieu rong: ";
+		cin >> cd >> cr;
+		cout << "Dien tich hinh chu nhat la: " << cd << "x" << cr << "= " << Tinh_DienTich_ChuNhat(cd, cr) << endl;
 		break;
 	case 't':
-		cout << "Dien tich hinh tron la : " << Tinh_DienTich_HinhTron(r);
+		cout << "Nhap ban kinh: ";
+		cin >> r;
+		cout << "Dien tich hinh tron la : " << Tinh_DienTich_HinhTron(r) << endl;
 		break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
 	}
-	
+
 	return 0;
-	
+
 }
