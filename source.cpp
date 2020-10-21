@@ -21,7 +21,7 @@ float thuong(int a, int b) {
 		cout << "Nhap sai, nhap b khac 0: ";
 		cin >> b;
 	}
-		return (float)a / b;
+	return (float)a / b;
 }
 float Tinh_Dientich_HinhVuong(float c)
 {
@@ -44,6 +44,24 @@ float ChuVi_HinhCN(float cd, float cr) {
 float ChuVi_HinhTron(float r) {
 	return (2 * r)*(3, 14);
 }
+void TruNgauNhien(int a, int b) {
+	cout << "Luyen tap phep Tru 2 so ngau nhien" << endl;
+	cout << "So nguyen a = " << a << endl;
+	cout << "So nguyen b = " << b << endl;
+	float kq;
+	cout << "Moi ban nhao ket qua phep tru " << a << " - " << b << " = ";
+	cin >> kq;
+	do {
+		if (kq == a - b) {
+			cout << "Ban da nhap dung ket qua phe tinh " << a << " - " << b << " = " << kq;
+		}
+		else {
+			cout << "ban da nhap sai vui long nhap lai ket qua" << endl;
+			cout << "Nhap lai = ";
+			cin >> kq;
+		}
+	} while (kq != a - b);
+}
 
 int main()
 {
@@ -63,6 +81,7 @@ int main()
 		<< "\td: Tinh chu vi hinh vuong." << endl
 		<< "\te: Tinh chu vi CN." << endl
 		<< "\tf: Tinh chu vi hinh tron." << endl
+		<< "\tx: Tru ngau nhien 2 so." << endl
 		<< "Hay chon: ";
 	cin >> phepToan;
 
@@ -76,7 +95,7 @@ int main()
 		break;
 	case '*':
 			cout << "Tich cua " << a << "x" << b << " = " << tich(a, b) << endl;
-			break;
+		break;
 	case '/':
 		cout << "Ket qua phep tinh chia giua " << a << "va" << b << "la: " << thuong(a, b) << endl;
 		break;
@@ -120,11 +139,15 @@ int main()
 		cout << "Nhap ban kinh: ";
 		cin >> r;
 		cout << "Chu vi hinh CN la: " << ChuVi_HinhTron(r);
-		break;
+	case 'x':
+		TruNgauNhien(randA, randB);
+			break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
 	}
+
 	return 0;
 
-} 
+
+}
