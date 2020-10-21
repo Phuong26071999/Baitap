@@ -52,13 +52,12 @@ int main()
 		cout << "\tSo nguyen b = " << randB << endl;
 		cout << "\tKet qua " << randA << " + " << randB << " = ";
 		cin >> kqR;
-		if (kqR == (randA + randB)) {
-			cout << "Ban da nhap dung ket qua la: " << randA + randB << " !!!" << endl;
+		while (kqR != randA + randB) {
+			cout << "Ban da nhap sai ket qua, nhap lai: ";
+			cin >> kqR;
 		}
-		else
-			cout << "Ban da nhap sai ket qua!!!" << endl;
+		cout << "Ban da nhap dung ket qua la: " << randA + randB << " !!!" << endl;
 		break;
-
 
 	default:
 		cout << "Chon sai phep toan";
