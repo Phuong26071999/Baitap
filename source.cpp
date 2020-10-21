@@ -21,7 +21,7 @@ float thuong(int a, int b) {
 		cout << "Nhap sai, nhap b khac 0: ";
 		cin >> b;
 	}
-	return (float)a / b;
+		return (float)a / b;
 }
 float Tinh_Dientich_HinhVuong(float c)
 {
@@ -34,24 +34,35 @@ float Tinh_DienTich_ChuNhat(float cd, float cr)
 }
 float Tinh_DienTich_HinhTron(float r) {
 	return (pow(r, 2)*PI);
-
+}
+float ChuVi_HinhVuong(float c) {
+	return (float)(c * 4);
+}
+float ChuVi_HinhCN(float cd, float cr) {
+	return (float)((cd + cr) * 2);
+}
+float ChuVi_HinhTron(float r) {
+	return (2 * r)*(3, 14);
 }
 
 int main()
 {
-	int a, b, r, c, cd, cr, kqR;
+	int a, b, kqR;
+	float r, cd, cr, c;
 	char phepToan;
 	srand(time(NULL));
 	int randA = 0 + rand() % (100 + 1 - 0);
 	int randB = 0 + rand() % (100 + 1 - 0);
 	cout << "Nhap 2 so nguyen: ";
 	cin >> a >> b;
-	//cout << "Tinh gi? (+,-,*,/,c) ";
 	cout << "Tinh gi? (+,-,*,/) " << endl
 		<< "\tr: Tinh cong tu 2 so ngau nhien." << endl
 		<< "\tv: Tinh dien tich hinh vuong." << endl
 		<< "\tn: Tinh dien tich hinh chu nhat." << endl
 		<< "\tt: Tinh dien tich hinh tron." << endl
+		<< "\td: Tinh chu vi hinh vuong." << endl
+		<< "\te: Tinh chu vi CN." << endl
+		<< "\tf: Tinh chu vi hinh tron." << endl
 		<< "Hay chon: ";
 	cin >> phepToan;
 
@@ -64,8 +75,8 @@ int main()
 		cout << "hieu la : " << hieu(a, b) << endl;
 		break;
 	case '*':
-		cout << "Tich cua " << a << "x" << b << " = " << tich(a, b) << endl;
-		break;
+			cout << "Tich cua " << a << "x" << b << " = " << tich(a, b) << endl;
+			break;
 	case '/':
 		cout << "Ket qua phep tinh chia giua " << a << "va" << b << "la: " << thuong(a, b) << endl;
 		break;
@@ -95,12 +106,25 @@ int main()
 		cout << "Nhap ban kinh: ";
 		cin >> r;
 		cout << "Dien tich hinh tron la : " << Tinh_DienTich_HinhTron(r) << endl;
+	case 'd':
+		cout << "nhap vao do dai hinh vuong: ";
+		cin >> c;
+		cout << "Chu vi hinh vuong la: " << ChuVi_HinhVuong(c);
+		break;
+	case 'e':
+		cout << "Nhap theo dung thu tu chieu dai, chieu rong: ";
+		cin >> cd >> cr;
+		cout << "Chu vi hinh CN la: " << ChuVi_HinhCN(cd, cr);
+		break;
+	case 'f':
+		cout << "Nhap ban kinh: ";
+		cin >> r;
+		cout << "Chu vi hinh CN la: " << ChuVi_HinhTron(r);
 		break;
 	default:
 		cout << "Chon sai phep toan";
 		break;
 	}
-
 	return 0;
 
-}
+} 
